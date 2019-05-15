@@ -1,7 +1,7 @@
 <!--  -->
 <template>
 <div class='liyang'>
-  <show-img v-if="isShowImg"></show-img>
+  <show-img v-show="isShowImg"></show-img>
   <!--左边卡片-->
   <left-card ></left-card>
   <!-- 终端-->
@@ -38,6 +38,7 @@ computed: {
     return this.$store.state.imgOpacity
   },
   isShowImg () {
+    console.info('显示',this.$store.state.isShowImg)
     return this.$store.state.isShowImg
   }
 },

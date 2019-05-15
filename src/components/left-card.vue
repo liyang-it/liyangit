@@ -63,6 +63,7 @@ watch: {},
 //方法集合
 methods: {
     showWeChat(url){
+      console.info(this.$store)
     this.$store.commit('setWeChatImgUrl',url)
     this.$store.commit('setImgOpacity',1)
     this.$store.commit('setIsShowImg',true)
