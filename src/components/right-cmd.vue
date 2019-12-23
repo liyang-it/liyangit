@@ -1,4 +1,4 @@
-<!--  -->
+
 <template>
 <div class='cmd' >
   <div class="right-cmd" id="cmd1">
@@ -19,7 +19,11 @@
           <li @click="toWeb('https://blog.csdn.net/qq_40739917')"><span>CSDN博客</span></li>
           <li @click="toWeb('https://www.cnblogs.com/liyangit-bky')"><span>博客园</span></li>
           <li @click="toWeb('http://www.liyangit.top/jy')"><span>简语</span></li>
-          <li @click="toWeb('http://www.liyangit.top/wyy')"><span>Vue版网抑云</span></li>
+          <li >
+            <span>网抑云音乐:</span>
+            <span @click="toWeb('http://www.liyangit.top/wyy')">Vue版</span>
+            <span @click="showWeChat('http://file.liyangit.top/wyy/scan.png')">小程序版</span>
+          </li>
         </ul>
     </div>
   </div>
@@ -61,6 +65,11 @@ watch: {},
 methods: {
   toWeb(url){
     window.location.href = url
+  },
+  showWeChat(url){
+    this.$store.commit('setWeChatImgUrl',url)
+    this.$store.commit('setImgOpacity',1)
+    this.$store.commit('setIsShowImg',true)
   }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
@@ -200,7 +209,7 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     li{
       cursor: pointer;
     }
-    li:hover{
+    li span:hover{
       color:rgb(56, 166, 240);
     }
   }

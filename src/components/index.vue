@@ -1,6 +1,7 @@
 <!--  -->
 <template>
-<div class='liyang' >
+<div class='liyang'>
+  <show-img v-if="isShowImg"></show-img>
   <!--左边卡片-->
   <left-card ></left-card>
   <!-- 终端-->
@@ -17,12 +18,14 @@
 const foot = () =>import('@/components/foot')
 const rightCmd = () =>import('@/components/right-cmd')
 const leftCard = () =>import('@/components/left-card')
+const showImg = () =>import('@/components/show-img')
 export default {
 //import引入的组件需要注入到对象中才能使用
 components: {
   foot,
   leftCard,
-  rightCmd
+  rightCmd,
+  showImg
 },
 data() {
 //这里存放数据
@@ -30,7 +33,14 @@ return {
 };
 },
 //监听属性 类似于data概念
-computed: {},
+computed: {
+  opacity (){
+    return this.$store.state.imgOpacity
+  },
+  isShowImg () {
+    return this.$store.state.isShowImg
+  }
+},
 //监控data中的数据变化
 watch: {},
 //方法集合
@@ -43,14 +53,14 @@ created() {
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
-document.onkeydown=function (e){
-        var currKey=0,evt=e||window.event;
-        currKey=evt.keyCode||evt.which||evt.charCode;
-        if (currKey == 123) {
-            window.event.cancelBubble = true;
-            window.event.returnValue = false;
-        }
-    }
+// document.onkeydown=function (e){
+//         var currKey=0,evt=e||window.event;
+//         currKey=evt.keyCode||evt.which||evt.charCode;
+//         if (currKey == 123) {
+//             window.event.cancelBubble = true;
+//             window.event.returnValue = false;
+//         }
+//     }
 },
 beforeCreate() {}, // 生命周期 - 创建之前
 beforeMount() {}, // 生命周期 - 挂载之前
