@@ -16,6 +16,7 @@
       </div>
       <span>{{label}}</span><span class="command">cat me.txt</span><br>
         <ul>
+          <li @click="toWeb('https://github.com/liyang-it/')"><span>GitHub</span></li>
           <li @click="toWeb('https://blog.csdn.net/qq_40739917')"><span>CSDN博客</span></li>
           <li @click="toWeb('https://www.cnblogs.com/liyangit-bky')"><span>博客园</span></li>
           <li @click="toWeb('http://www.liyangit.top/jy')"><span>简语</span></li>
