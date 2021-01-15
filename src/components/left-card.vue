@@ -20,7 +20,7 @@
         <p id="showContent3" v-html="cardContent3"></p>
       </div>
       <div class="left-card-content-btn" id="showBtn">
-        <div>关于</div>
+        <div @click="showWeChat('http://file.liyangit.top/weapp/me.png')">小程序中查看</div>
         <div>简历</div>
       </div>
     </div>
@@ -59,6 +59,11 @@ computed: {
 watch: {},
 //方法集合
 methods: {
+    showWeChat(url){
+    this.$store.commit('setWeChatImgUrl',url)
+    this.$store.commit('setImgOpacity',1)
+    this.$store.commit('setIsShowImg',true)
+  }
 },
 //生命周期 - 创建完成（可以访问当前this实例）
 created() {
@@ -190,14 +195,14 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
       margin: auto;
       text-align: center;
       div{
-        border: none;
-        background-color: white;
-        font-size: 1.2rem;
-        height: 30px;
-        width: 70px;
-        cursor: pointer;
-        float: left;
-        margin-left: 45px;
+          border: none;
+          background-color: white;
+          font-size: 1.2rem;
+          height: 30px;
+          cursor: pointer;
+          float: left;
+          margin-left: 35px;
+          text-align: center;
       }
       div:hover{
         color:rgb(56, 166, 240);

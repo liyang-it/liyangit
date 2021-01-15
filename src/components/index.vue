@@ -53,14 +53,14 @@ created() {
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
-// document.onkeydown=function (e){
-//         var currKey=0,evt=e||window.event;
-//         currKey=evt.keyCode||evt.which||evt.charCode;
-//         if (currKey == 123) {
-//             window.event.cancelBubble = true;
-//             window.event.returnValue = false;
-//         }
-//     }
+document.onkeydown=function (e){
+        var currKey=0,evt=e||window.event;
+        currKey=evt.keyCode||evt.which||evt.charCode;
+        if (currKey == 123) {
+            window.event.cancelBubble = true;
+            window.event.returnValue = false;
+        }
+    }
 },
 beforeCreate() {}, // 生命周期 - 创建之前
 beforeMount() {}, // 生命周期 - 挂载之前
