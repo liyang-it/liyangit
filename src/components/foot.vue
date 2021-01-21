@@ -4,7 +4,7 @@
   <div class="content">
     <p>©&nbsp;&nbsp;{{year}}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="https://beian.miit.gov.cn/">{{bah}}</a></p><br>
     <p>Main producer: {{enName}}</p><br>
-    <p>总访问量&nbsp;&nbsp;{{accessNumber}}</p><br>
+    <!-- <p>总访问量&nbsp;&nbsp;{{accessNumber}}</p><br> -->
     <p @click="toYpy('https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral')">本网站由&nbsp;<img src="http://www.file.liyangit.top/liyangit/%E5%8F%88%E6%8B%8D%E4%BA%91_logo6.png">&nbsp;提供CDN加速/云储存服务</p>
   </div>
 </div>
@@ -54,14 +54,14 @@ created() {
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
   let t = this
-  axios.all(
-    [
-      axios.get('http://www.liyangit.top/liyang/incrAccessNumber.json'),
-      axios.get('http://www.liyangit.top/liyang/getAccessNumber.json')
-    ]
-  ).then(res=>{
-    t.accessNumber = res[1].data.data
-  })
+  // axios.all(
+  //   [
+  //     axios.get('http://www.liyangit.top/liyang/incrAccessNumber.json'),
+  //     axios.get('http://www.liyangit.top/liyang/getAccessNumber.json')
+  //   ]
+  // ).then(res=>{
+  //   t.accessNumber = res[1].data.data
+  // })
   setTimeout(()=>{
     //去除透明
      document.getElementById('foot').style.opacity = 1
