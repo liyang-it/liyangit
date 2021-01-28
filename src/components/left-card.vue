@@ -119,8 +119,10 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 @media(min-width: 1201px){
 .left-card{
     margin-left: 250px;
-    margin-top: 60px;
+    // margin-top: 500px;
     width: 300px;
+    position: fixed;
+    z-index: 125;
 }
 }
 #card{

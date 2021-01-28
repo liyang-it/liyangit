@@ -74,9 +74,10 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 }
 .show-img{
+  
   height: 400px;
   position: fixed;
-  z-index: 10;
+  z-index: 130;
   left: 0;
   right: 0;
   margin: 0 auto;

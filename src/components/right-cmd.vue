@@ -25,6 +25,10 @@
             <span @click="toWeb('http://www.liyangit.top/wyy')">Vue版</span>
             <span @click="showWeChat('http://file.liyangit.top/wyy/scan.png')">小程序版</span>
           </li>
+          <li>
+            <span>柠檬酸工具盒:</span>
+            <span @click="showWeChat('http://www.file.liyangit.top/weapp/scan.jpg')">小程序版</span>
+          </li>
         </ul>
     </div>
   </div>
@@ -149,6 +153,13 @@ activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
     margin: 0 auto;
     margin-top: 20px;
   }
+}
+@media(min-width: 1201px){
+    .right-cmd{
+      position: fixed;
+      margin-top: 60px;
+      z-index: 126;
+    }
 }
 @media(min-width: 668px) and (max-width: 1199px){
     .right-cmd{

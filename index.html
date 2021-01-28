@@ -9,22 +9,49 @@
   </head>
   <body>
     <div id="app"></div>
+    <!--https://img-baofun.zhhainiao.com/pcwallpaper_ugc/preview/6391237a9e70bb88c9814644c6814712_preview.mp4-->
+    <video src="http://www.file.liyangit.top/liyangit/bgvideo.mp4" loop autoplay></video>
   </body>
 </html>
 <style>
   html{
-    cursor: url('http://www.file.liyangit.top/liyangit/tygb.ico'),pointer;
+    cursor: url('http://www.file.liyangit.top/liyangit/guangbiao.ico'),pointer;
     transition: all 1s linear;
     -webkit-transition:  all 1s linear;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
   }
   body{
+    transition: all 1s linear;
+    -webkit-transition:  all 1s linear;
     background-image: linear-gradient(to left, rgba(255, 0, 149, 0.2), rgba(0, 247, 255, 0.2)), url(http://www.file.liyangit.top/liyangit/bg.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
     
   }
   *{
     font-family: 'Fira Code', monospace;
+  }
+  video{
+      display: none;
+    }
+  /* 如果屏幕可见区域小于1080 不显示视频*/
+  @media (min-width: 1000px){
+    body{
+      position: fixed;
+    }
+    video{
+      display: block;
+      margin-top: -30px;
+      width: 100%;
+    }
   }
 </style>
