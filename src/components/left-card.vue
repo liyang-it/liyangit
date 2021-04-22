@@ -6,7 +6,7 @@
     <div class="left-card-img">
       <!-- <img src="../assets/portrait.jpg" alt=""> -->
       <!--使用云储存-->
-      <img src="http://www.file.liyangit.top/liyangit/portrait.jpg" alt="">
+      <img :src="cardPortait" alt="">
     </div>
     <!--卡片内容-->
     <div class="left-card-content">
@@ -53,6 +53,9 @@ computed: {
   },
   cardContent3 () {
     return card.cardContent3
+  },
+  cardPortait () {
+    return card.cardPortait
   }
 },
 //监控data中的数据变化
