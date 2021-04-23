@@ -44,15 +44,24 @@
       display: none;
     }
   /* 如果屏幕可见区域大于1080 显示视频*/
-  @media (min-width: 1200px){
+  @media (min-width: 1201px){
     body{
       position: fixed;
     }
     video{
       display: block;
       margin-top: -30px;
-      /* width: 100%; */
+      width: 100%;
       
+    }
+  }
+  @media (min-width: 1080px){
+    body{
+      position: fixed;
+    }
+    video{
+      display: block;
+      margin-top: -30px; 
     }
   }
 </style>
