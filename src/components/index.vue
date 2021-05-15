@@ -10,7 +10,6 @@
   <foot ></foot>
 </div>
 </template>
-
 <script>
 /* eslint-disable */
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
@@ -29,8 +28,7 @@ components: {
 },
 data() {
 //这里存放数据
-return {
-};
+return {};
 },
 //监听属性 类似于data概念
 computed: {

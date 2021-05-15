@@ -43,7 +43,9 @@ import {centos} from '@/api/user.js'
 import axios from 'axios'
 export default {
 //import引入的组件需要注入到对象中才能使用
-components: {centos},
+components: {
+  centos
+  },
 data() {
 //这里存放数据
 return {

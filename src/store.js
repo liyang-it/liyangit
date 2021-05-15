@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
-// eslint-disable-next-line new-cap
 export default new Vuex.Store({
   state: {
     weChatImgUrl: '测试Vuex',
